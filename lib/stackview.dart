@@ -37,13 +37,11 @@ class Gridstackk extends StatelessWidget {
                 Card(
                   child: Image(
                     image: NetworkImage(images[index]),
-                  )
-                  ,
+                  ),
                 ),
                 Positioned(
                   top: 75,
                   left: 5,
-
                   child: Text(
                     name[index],
                     style: TextStyle(

@@ -187,7 +187,6 @@ class HotelDetails extends StatelessWidget {
           ),
           BottomNavigationBar(
             elevation: 20,
-
             items: [
               BottomNavigationBarItem(
                   icon: Icon(Icons.search), label: "Search"),
@@ -201,6 +200,4 @@ class HotelDetails extends StatelessWidget {
       ),
     );
   }
-
-
 }

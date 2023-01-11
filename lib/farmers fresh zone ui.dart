@@ -57,87 +57,88 @@ class Farmer extends StatelessWidget {
           ),
           SliverList(
               delegate: SliverChildListDelegate([
-            Padding(
-              padding: const EdgeInsets.only(top: 10, left: 22),
-              child: Row(
-                children: [
-                  Container(
-                    height: 40,
-                    width: 110,
-                    child: Center(
-                        child: Text(
-                      "VEGETABLES",
-                      style: TextStyle(color: Colors.green),
-                    )),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: Colors.green.shade100),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, left: 22),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 40,
+                        width: 110,
+                        child: Center(
+                            child: Text(
+                              "VEGETABLES",
+                              style: TextStyle(color: Colors.green),
+                            )),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            color: Colors.green.shade100),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        height: 40,
+                        width: 110,
+                        child: Center(
+                            child: Text(
+                              "FRUITS",
+                              style: TextStyle(color: Colors.green),
+                            )),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            color: Colors.green.shade100),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        height: 40,
+                        width: 110,
+                        child: Center(
+                            child: Text(
+                              "EXOTIC CUTS",
+                              style: TextStyle(color: Colors.green),
+                            )),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            color: Colors.green.shade100),
+                      )
+                    ],
                   ),
-                  SizedBox(
-                    width: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Column(
+                    children: [
+                      CarouselSlider(
+                          items: [
+                            Container(
+                              decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://www.shutterstock.com/image-vector/hand-drawn-set-vegetables-fruits-600w-1406260340.jpg"))),
+                            ),
+                            Container(
+                              decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          "https://www.shutterstock.com/image-vector/hand-drawn-set-vegetables-fruits-600w-1406260337.jpg"))),
+                            ),
+                          ],
+                          options: CarouselOptions(
+                            autoPlay: true,
+                            viewportFraction: .7,
+                            height: 200,
+                            enlargeCenterPage: true,
+                            aspectRatio: 16 / 9,
+                            autoPlayCurve: Curves.easeInToLinear,
+                            autoPlayAnimationDuration: Duration(
+                                milliseconds: 600),
+                            enableInfiniteScroll: true,
+                          )),
+                    ],
                   ),
-                  Container(
-                    height: 40,
-                    width: 110,
-                    child: Center(
-                        child: Text(
-                      "FRUITS",
-                      style: TextStyle(color: Colors.green),
-                    )),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: Colors.green.shade100),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Container(
-                    height: 40,
-                    width: 110,
-                    child: Center(
-                        child: Text(
-                      "EXOTIC CUTS",
-                      style: TextStyle(color: Colors.green),
-                    )),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: Colors.green.shade100),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: Column(
-                children: [
-                  CarouselSlider(
-                      items: [
-                        Container(
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: NetworkImage(
-                                      "https://www.shutterstock.com/image-vector/hand-drawn-set-vegetables-fruits-600w-1406260340.jpg"))),
-                        ),
-                        Container(
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: NetworkImage(
-                                      "https://www.shutterstock.com/image-vector/hand-drawn-set-vegetables-fruits-600w-1406260337.jpg"))),
-                        ),
-                      ],
-                      options: CarouselOptions(
-                        autoPlay: true,
-                        viewportFraction: .7,
-                        height: 200,
-                        enlargeCenterPage: true,
-                        aspectRatio: 16 / 9,
-                        autoPlayCurve: Curves.easeInToLinear,
-                        autoPlayAnimationDuration: Duration(milliseconds: 600),
-                        enableInfiniteScroll: true,
-                      )),
-                ],
-              ),
-            ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(10),
                   child: Container(
@@ -187,7 +188,7 @@ class Farmer extends StatelessWidget {
                     ),
                   ),
                 )
-          ])),
+              ])),
           SliverList(delegate: SliverChildListDelegate(
               [
                 SizedBox(

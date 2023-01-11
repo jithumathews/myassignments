@@ -1,0 +1,219 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Expan(),
+  ));
+}
+
+class Expan extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(
+          elevation: 0,
+          title: Center(
+              child: Text("Experience",
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white)))),
+      body: SingleChildScrollView(
+        child: Container(
+          width: 1000,
+          height: 1000,
+          color: Colors.blue,
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Card(
+                    semanticContainer: true,
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Lottie.network(
+                        "https://assets10.lottiefiles.com/packages/lf20_ntrhqntu.json",
+                        height: 150,
+                        width: 500,
+                        fit: BoxFit.fill),
+                  ),
+                   Padding(
+                    padding: EdgeInsets.only(top: 50),
+                    child: ExpansionTile(
+                      title: Text(
+                        "Flutter Internship",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Padding(
+                        padding: EdgeInsets.only(top: 20),
+                        child: Text("6 months +",
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                      children: [
+                        Container(
+                          height: 110,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),color: Colors.black
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Column(
+                              children: [
+                                Text("Institute : Luminar Technolab",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("fees      : 45000      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("Location     : Kakkanad      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("Daily class duration      : 3 hours      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                              ],
+                            ),
+                          ),
+                        )
+
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              Stack(
+                children: [
+                  Card(
+                    semanticContainer: true,
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Lottie.network(
+                        "https://assets2.lottiefiles.com/packages/lf20_9h0ta4cv.json",
+                        height: 150,
+                        width: 500,
+                        fit: BoxFit.fill),
+                  ),
+                   Padding(
+                    padding: EdgeInsets.only(top: 50),
+                    child: ExpansionTile(
+                      title: Text(
+                        "Android Training",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Padding(
+                        padding: EdgeInsets.only(top: 20),
+                        child: Text("2 months",
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                      children: [
+                        Container(
+                          height: 110,
+                          width: 300,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),color: Colors.black
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Column(
+                              children: [
+                                Text("Institute : Luminar Technolab",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("fees      : 15000      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("Location     : Kakkanad      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("Daily class duration      : 2 hours      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Stack(
+                children: [
+                  Card(
+                    semanticContainer: true,
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Lottie.network(
+                        "https://assets6.lottiefiles.com/private_files/lf30_fA5yqD.json",
+                        height: 150,
+                        width: 500,
+                        fit: BoxFit.fill),
+                  ),
+                 Padding(
+                    padding: EdgeInsets.only(top: 50),
+                    child: ExpansionTile(
+                      title: Text(
+                        "Java Training",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Padding(
+                        padding: EdgeInsets.only(top: 20),
+                        child: Text("2 months",
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                      children: [
+                        Container(
+                          height: 110,
+                          width: 300,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),color: Colors.black
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Column(
+                              children: [
+                                Text("Institute : Luminar Technolab",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("fees      : 15000      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("Location     : Kakkanad      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                                Text("Daily class duration      : 2 hours      ",
+                                    style:
+                                    TextStyle(color: Colors.white, fontSize: 20)),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

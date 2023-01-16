@@ -10,6 +10,14 @@ void main() {
 }
 
 class Expan extends StatelessWidget {
+  var names = ["shijil", "abhinav", "hiba", "lechu"];
+  var number = ['99999', '88888', '77777', '66666'];
+  var images = [
+    "https://cdn-icons-png.flaticon.com/128/8727/8727604.png",
+    "https://cdn-icons-png.flaticon.com/128/8727/8727604.png",
+    "https://cdn-icons-png.flaticon.com/128/8727/8727604.png",
+    "https://cdn-icons-png.flaticon.com/128/8727/8727604.png"
+  ];
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

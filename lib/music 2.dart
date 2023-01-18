@@ -15,24 +15,29 @@ class Music2 extends StatefulWidget {
 }
 
 class _Music2State extends State<Music2> {
-  int selectedIndex=0;
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.black,
-
-      appBar: AppBar(title: Center(
-        child: Text(
-          "Playlists",
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 40,
-            color: Colors.pinkAccent[100],),textAlign: TextAlign.center,
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        elevation: 1,
+        title: Center(
+          child: Text(
+            "Playlists",
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 40,
+              color: Colors.pinkAccent[100],
+            ),
+            textAlign: TextAlign.center,
+          ),
         ),
-      ), backgroundColor: Colors.black,),
-
+        backgroundColor: Colors.black,
+      ),
       body: SingleChildScrollView(
         child: Column(
-
           children: [
             search(),
             Musics_grid(),
@@ -81,8 +86,7 @@ class _Music2State extends State<Music2> {
 }
 
 class Musics_grid extends StatelessWidget {
-
-  List<String>images = [
+  List<String> images = [
     "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmV3JTIwbXVzaWN8ZW58MHx8MHx8&w=1000&q=80",
     "https://media.istockphoto.com/id/958364166/photo/girl-in-headphones-listening-to-music-in-the-city-at-sunset.jpg?b=1&s=170667a&w=0&k=20&c=4fLCctdgv1eajvvzq4zKwUGfMbK7BC53gyKJ3Cx8rkY=",
     "https://media.istockphoto.com/id/1199243596/photo/concert-stage-on-rock-festival-music-instruments-silhouettes.jpg?b=1&s=170667a&w=0&k=20&c=YyK_M2YtGirW4gQpdvP4pPuuEQ4UGNrtEWIlKcP6ze8=",
@@ -106,47 +110,55 @@ class Musics_grid extends StatelessWidget {
         itemCount: images.length,
         itemBuilder: (BuildContext, int index) {
           return
-            // Container(color: Colors.black,
-            // child:
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Container(height: 180,width: 180,
-                      // height: MediaQuery.of(context).size.height / 10,
-                      // width: MediaQuery.of(context).size.width *.3,
-                      decoration: BoxDecoration(
-                        // boxShadow: [BoxShadow(color: Colors.green,blurRadius: 8,),],
-                        borderRadius: BorderRadius.circular(25),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(images[index])),
-                      ),
+              // Container(color: Colors.black,
+              // child:
+              Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
+                children: [
+                  Container(
+                    height: 180, width: 180,
+                    // height: MediaQuery.of(context).size.height / 10,
+                    // width: MediaQuery.of(context).size.width *.3,
+                    decoration: BoxDecoration(
+                      // boxShadow: [BoxShadow(color: Colors.green,blurRadius: 8,),],
+                      borderRadius: BorderRadius.circular(35),
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(images[index])),
                     ),
-                  ],
-                ),
-              ],
-            );
+                  ),
+                ],
+              ),
+            ],
+          );
         });
   }
 }
-class search extends StatelessWidget{
+
+class search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          color: Colors.grey,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.grey[800],
+            border: Border.all(color: Colors.pinkAccent)
+          ),
           height: 40,
+          width: 350,
           child: const Center(
             child: Padding(
               padding: EdgeInsets.all(8.0),
               child: TextField(
                 decoration: InputDecoration(
                     hintText: 'Search...',
-                    suffixIcon: Icon(Icons.search_sharp)
+                    hintStyle: TextStyle(color: Colors.white),
+                    suffixIcon: Icon(Icons.search_sharp,color: Colors.white,),
                 ),
               ),
             ),
@@ -155,5 +167,4 @@ class search extends StatelessWidget{
       ],
     );
   }
-
 }

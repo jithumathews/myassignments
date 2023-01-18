@@ -11,8 +11,6 @@ void main() {
 }
 
 class Music extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,12 +26,12 @@ class Music extends StatelessWidget {
                 width: double.infinity,
                 child: Center(
                     child: Text(
-                      "MUSIFY.",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 40,
-                          color: Colors.pinkAccent),
-                    )),
+                  "MUSIFY.",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 40,
+                      color: Colors.pinkAccent),
+                )),
               ),
               Container(
                 child: Column(
@@ -103,7 +101,7 @@ class Music extends StatelessWidget {
                             aspectRatio: 16 / 9,
                             autoPlayCurve: Curves.easeInToLinear,
                             autoPlayAnimationDuration:
-                            Duration(milliseconds: 600),
+                                Duration(milliseconds: 600),
                             enableInfiniteScroll: true,
                           )),
                     ),
@@ -302,7 +300,6 @@ class Music extends StatelessWidget {
                             ),
                             label: "Search",
                           ),
-
                           BottomNavigationBarItem(
                               icon: Icon(
                                 Icons.menu,

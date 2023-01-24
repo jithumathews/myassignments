@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my1project/music%202.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -294,9 +295,15 @@ class Music extends StatelessWidget {
                               ),
                               label: "Home"),
                           BottomNavigationBarItem(
-                            icon: Icon(
-                              Icons.search,
-                              color: Colors.white,
+                            icon: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) => Music2()));
+                              },
+                              child: Icon(
+                                Icons.search,
+                                color: Colors.white,
+                              ),
                             ),
                             label: "Search",
                           ),

@@ -2,12 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Music2(),
-  ));
-}
+
 
 class Music2 extends StatefulWidget {
   @override
@@ -145,10 +140,9 @@ class search extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Colors.grey[800],
-            border: Border.all(color: Colors.pinkAccent)
-          ),
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.grey[800],
+              border: Border.all(color: Colors.pinkAccent)),
           height: 40,
           width: 350,
           child: const Center(
@@ -156,9 +150,12 @@ class search extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               child: TextField(
                 decoration: InputDecoration(
-                    hintText: 'Search...',
-                    hintStyle: TextStyle(color: Colors.white),
-                    suffixIcon: Icon(Icons.search_sharp,color: Colors.white,),
+                  hintText: 'Search...',
+                  hintStyle: TextStyle(color: Colors.white),
+                  suffixIcon: Icon(
+                    Icons.search_sharp,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),

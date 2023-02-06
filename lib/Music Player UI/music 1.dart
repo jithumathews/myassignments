@@ -2,7 +2,8 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my1project/music%202.dart';
+import 'package:my1project/Music%20Player%20UI/music%202.dart';
+
 
 void main() {
   runApp(MaterialApp(

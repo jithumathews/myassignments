@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my1project/tourissm%203.dart';
+import 'package:my1project/Tourissm/tourissm%203.dart';
+
 // import 'package:luminar_assignments/Touism%20App%20UI%202/Detailspage.dart';
 
 class Tourism_first extends StatelessWidget {

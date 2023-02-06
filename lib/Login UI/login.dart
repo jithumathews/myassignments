@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myassignments/login.dart';
+import 'package:my1project/signup.dart';
 
-class SignForm extends StatefulWidget {
+class LoginForm extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _SignFormState();
+  State<StatefulWidget> createState() => _LoginFormState();
 }
 
-class _SignFormState extends State {
+class _LoginFormState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _SignFormState extends State {
                 padding: EdgeInsets.all(30.0),
                 child: Center(
                     child: Text(
-                  "Sign up",
+                  "Login",
                   style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 )),
               ),
@@ -29,7 +29,7 @@ class _SignFormState extends State {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Center(
-                child: Text("Create an Account, Its free"),
+                child: Text("Welcome back ! Login with your credentinals"),
               ),
             ),
             Padding(
@@ -56,18 +56,6 @@ class _SignFormState extends State {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                obscuringCharacter: '*',
-                decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.visibility_off),
-                    labelText: 'Confirm Password',
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10))),
-                textInputAction: TextInputAction.done,
-              ),
-            ),
-            Padding(
               padding: const EdgeInsets.only(left: 100, right: 100),
               child: ElevatedButton(
                 onPressed: () {},
@@ -79,8 +67,9 @@ class _SignFormState extends State {
               child: TextButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LoginForm()));
-                  }, child: Text("Already have an account? Login")),
+                        MaterialPageRoute(builder: (context) => SignForm()));
+                  },
+                  child: Text("Not a user ?,Register here")),
             )
           ],
         ),

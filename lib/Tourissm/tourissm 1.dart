@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my1project/tourissm%202.dart';
+import 'package:my1project/Tourissm/tourissm%202.dart';
+
 // import 'package:luminar_assignments/Touism%20App%20UI%202/Popular%20places%20page.dart';
 
 void main() {
